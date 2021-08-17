@@ -31,7 +31,7 @@ watch the demo at [https://youtu.be/7yXmn14xxCE](https://youtu.be/7yXmn14xxCE)
 1. build the docker container:
 
     ```sh
-    docker build -f Dockerfile.arm -t react-docker-aws:latest .
+    docker build -f Dockerfile.arm --platform=linux/amd64 -t react-docker-aws:latest .
     ```
 
 2. run the docker container
