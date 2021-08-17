@@ -6,7 +6,7 @@ aws ecr get-login-password --region <AWS_REGION> | docker login --username AWS -
 
 echo "Build Steps:"
 echo "building image..."
-docker build --platform=linux/amd64 -t <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/<ECR_REGISTRY_NAME>:latest .
+docker build -f Dockerfile.arm --platform=linux/amd64 -t <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/<ECR_REGISTRY_NAME>:latest .
 
 echo "Post-Build Steps:"
 echo "pushing image to AWS ECR..."
